@@ -124,6 +124,7 @@ function JsDiffRender(params){
     var dom = null;
     return function(ln){
       if(dom===null){
+        text = "\n" + text;
         var html = prettyPrintOne(
           text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;').replace(/>/g,'&gt;'),
           (/\.([^.]*)$/.exec(fileName)||[])[1],
